@@ -107,6 +107,9 @@
     <EmbeddedResource Include="CrudPinjaman.resx">
       <DependentUpon>CrudPinjaman.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPengembalian.resx">
+      <DependentUpon>FormPengembalian.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KelolaPinjaman.resx">
       <DependentUpon>KelolaPinjaman.cs</DependentUpon>
     </EmbeddedResource>
