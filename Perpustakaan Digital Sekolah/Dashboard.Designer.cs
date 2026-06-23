@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelStatistik = new System.Windows.Forms.Panel();
@@ -41,15 +41,20 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartBuku = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnKelolaBuku = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnLaporan = new System.Windows.Forms.Button();
             this.panelStatistik.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBuku)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +62,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 34);
+            this.label1.Location = new System.Drawing.Point(28, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 20);
             this.label1.TabIndex = 1;
@@ -67,7 +72,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 29);
+            this.label2.Location = new System.Drawing.Point(13, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 16);
             this.label2.TabIndex = 3;
@@ -82,16 +87,16 @@
             this.panelStatistik.Controls.Add(this.label5);
             this.panelStatistik.Controls.Add(this.label3);
             this.panelStatistik.Controls.Add(this.label2);
-            this.panelStatistik.Location = new System.Drawing.Point(37, 71);
+            this.panelStatistik.Location = new System.Drawing.Point(32, 118);
             this.panelStatistik.Name = "panelStatistik";
-            this.panelStatistik.Size = new System.Drawing.Size(350, 105);
+            this.panelStatistik.Size = new System.Drawing.Size(350, 84);
             this.panelStatistik.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 58);
+            this.label3.Location = new System.Drawing.Point(20, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 18);
             this.label3.TabIndex = 4;
@@ -101,7 +106,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(134, 58);
+            this.label4.Location = new System.Drawing.Point(134, 45);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 18);
             this.label4.TabIndex = 6;
@@ -111,7 +116,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(127, 29);
+            this.label5.Location = new System.Drawing.Point(127, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 16);
             this.label5.TabIndex = 5;
@@ -121,7 +126,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(250, 58);
+            this.label6.Location = new System.Drawing.Point(250, 45);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 18);
             this.label6.TabIndex = 8;
@@ -131,7 +136,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(243, 29);
+            this.label7.Location = new System.Drawing.Point(243, 16);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 16);
             this.label7.TabIndex = 7;
@@ -141,37 +146,37 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.chart1);
-            this.panel1.Location = new System.Drawing.Point(37, 256);
+            this.panel1.Controls.Add(this.chartBuku);
+            this.panel1.Location = new System.Drawing.Point(32, 275);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 252);
+            this.panel1.Size = new System.Drawing.Size(516, 252);
             this.panel1.TabIndex = 10;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(33, 219);
+            this.label14.Location = new System.Drawing.Point(28, 238);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(303, 20);
             this.label14.TabIndex = 9;
             this.label14.Text = "DISTRIBUSI BUKU PER KATEGORI";
             // 
-            // chart1
+            // chartBuku
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(16, 13);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(308, 225);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            chartArea2.Name = "ChartArea1";
+            this.chartBuku.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartBuku.Legends.Add(legend2);
+            this.chartBuku.Location = new System.Drawing.Point(16, 13);
+            this.chartBuku.Name = "chartBuku";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartBuku.Series.Add(series2);
+            this.chartBuku.Size = new System.Drawing.Size(308, 225);
+            this.chartBuku.TabIndex = 0;
+            this.chartBuku.Text = "chart1";
             // 
             // panel2
             // 
@@ -182,7 +187,7 @@
             this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(345, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(155, 252);
+            this.panel2.Size = new System.Drawing.Size(171, 252);
             this.panel2.TabIndex = 1;
             // 
             // label8
@@ -225,11 +230,78 @@
             this.label11.TabIndex = 12;
             this.label11.Text = "Majalah :";
             // 
+            // btnDashboard
+            // 
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.Location = new System.Drawing.Point(32, 12);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(149, 47);
+            this.btnDashboard.TabIndex = 12;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = false;
+            // 
+            // btnKelolaBuku
+            // 
+            this.btnKelolaBuku.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnKelolaBuku.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKelolaBuku.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKelolaBuku.ForeColor = System.Drawing.Color.White;
+            this.btnKelolaBuku.Location = new System.Drawing.Point(188, 12);
+            this.btnKelolaBuku.Name = "btnKelolaBuku";
+            this.btnKelolaBuku.Size = new System.Drawing.Size(149, 47);
+            this.btnKelolaBuku.TabIndex = 13;
+            this.btnKelolaBuku.Text = "Kelola Buku";
+            this.btnKelolaBuku.UseVisualStyleBackColor = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(685, 22);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 18);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "Admin";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Firebrick;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(745, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 40);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Logout";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnLaporan
+            // 
+            this.btnLaporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLaporan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLaporan.ForeColor = System.Drawing.Color.White;
+            this.btnLaporan.Location = new System.Drawing.Point(345, 12);
+            this.btnLaporan.Name = "btnLaporan";
+            this.btnLaporan.Size = new System.Drawing.Size(149, 47);
+            this.btnLaporan.TabIndex = 16;
+            this.btnLaporan.Text = "Laporan";
+            this.btnLaporan.UseVisualStyleBackColor = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 601);
+            this.ClientSize = new System.Drawing.Size(850, 550);
+            this.Controls.Add(this.btnLaporan);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.btnKelolaBuku);
+            this.Controls.Add(this.btnDashboard);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panelStatistik);
@@ -239,7 +311,7 @@
             this.panelStatistik.ResumeLayout(false);
             this.panelStatistik.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBuku)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -264,7 +336,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartBuku;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Button btnKelolaBuku;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLaporan;
     }
 }
 

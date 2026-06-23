@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Perpustakaan_Digital_Sekolah
 {
-    public partial class Login : Form
+    public partial class KelolaPinjaman : Form
     {
-        string conDb = @"Data Source=.\SQLEXPRESS;Database=PerpusSekolah;Integrated Security=True;TrustServerCertificate=True;";
-        public Login()
+        public KelolaPinjaman()
         {
             InitializeComponent();
         }
+
     }
 }

@@ -33,8 +33,6 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNama = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -52,7 +50,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(225, 206);
+            this.label2.Location = new System.Drawing.Point(225, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 18);
             this.label2.TabIndex = 1;
@@ -60,7 +58,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(228, 234);
+            this.txtEmail.Location = new System.Drawing.Point(228, 157);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(322, 30);
@@ -68,7 +66,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(228, 326);
+            this.txtPassword.Location = new System.Drawing.Point(228, 262);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(322, 30);
@@ -78,29 +76,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(225, 298);
+            this.label3.Location = new System.Drawing.Point(225, 234);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Password : ";
-            // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(228, 150);
-            this.txtNama.Multiline = true;
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(322, 30);
-            this.txtNama.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(225, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 18);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Nama :";
             // 
             // btnLogin
             // 
@@ -108,9 +88,9 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(312, 393);
+            this.btnLogin.Location = new System.Drawing.Point(287, 351);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(152, 44);
+            this.btnLogin.Size = new System.Drawing.Size(210, 44);
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -121,15 +101,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 469);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.txtNama);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Login";
-            this.Text = "Login";
+            this.Text = "s";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,8 +120,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNama;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnLogin;
     }
 }
