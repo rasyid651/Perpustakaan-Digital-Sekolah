@@ -295,6 +295,11 @@ namespace Perpustakaan_Digital_Sekolah
             }
         }
 
-
+        private void btnKelolaPinjaman_Click(object sender, EventArgs e)
+        {
+            CrudPinjaman cpj = new CrudPinjaman();
+            cpj.Show();
+            this.Hide();
+        }
     }
 }

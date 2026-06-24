@@ -40,9 +40,9 @@ namespace Perpustakaan_Digital_Sekolah
                 {
                     con.Open();
                     // query join tabel
-                    string query = @"SELECT p.id_pinjam, p.tanggal, u.nama as peminjam, p.tanggal_kembali, CASE
+                    string query = @"SELECT p.id_pinjam, p.tanggal, u.name as peminjam, p.tanggal_kembali, CASE
                     WHEN p.status = 0 THEN 'Dipinjam' ELSE 'Dikembalikan' END as status_text FROM tbl_peminjaman p LEFT JOIN tbl_user
-                    u ON p.id_user ORDER BY p.id_pinjam DESC";
+                    u ON p.id_user = u.id_user ORDER BY p.id_pinjam DESC";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
@@ -52,9 +52,8 @@ namespace Perpustakaan_Digital_Sekolah
                             adapter.Fill(dt);
                             dgvPeminjaman.DataSource = dt;
 
-                            if (dgvPeminjaman.Columns["id_pinjam"] != null || dgvPeminjaman.Columns["id_user"] != null)
+                            if (dgvPeminjaman.Columns["id_pinjam"] != null)
                                 dgvPeminjaman.Columns["id_pinjam"].Visible = false;
-                                dgvPeminjaman.Columns["id_user"].Visible = false;
 
                             TampilkanNoUrut();
                         }
@@ -112,19 +111,19 @@ namespace Perpustakaan_Digital_Sekolah
                 using (SqlConnection con = new SqlConnection(conDb))
                 {
                     con.Open();
-                    string query = @"SELECT p.id_pinjam, p.tanggal, u.nama as peminjam, 
+                    string query = @"SELECT p.id_pinjam, p.tanggal, u.name as peminjam, 
                             p.tanggal_kembali, CASE 
                             WHEN p.status = 0 THEN 'Dipinjam' ELSE 'Dikembalikan' END as status_text 
                             FROM tbl_peminjaman p 
                             LEFT JOIN tbl_user u ON p.id_user = u.id_user
-                            WHERE u.nama LIKE @cari";
+                            WHERE u.name LIKE @cari";
 
                     if (cbStatus.SelectedIndex > 0)
-                        query += "AND p.status = " + (cbStatus.SelectedIndex - 1);
+                        query += " AND p.status = " + (cbStatus.SelectedIndex - 1);
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        cmd.Parameters.AddWithValue("@keyword", "%" + txtCari.Text + "%");
+                        cmd.Parameters.AddWithValue("@cari", "%" + txtCari.Text + "%");
 
                         using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                         {
